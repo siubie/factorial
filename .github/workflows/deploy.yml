@@ -15,7 +15,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-            cd /var/www/imigrasi/
+            cd /var/www/qa.putraprima.id/
             git remote -v
             git pull
             composer install
