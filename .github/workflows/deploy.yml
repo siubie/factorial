@@ -16,8 +16,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           script: |
             cd /var/www/qa.putraprima.id/
-            git remote -v
-            git pull
+            git fetch --all
+            git reset --hard origin/master
             composer install
             npm install
             npm run prod
