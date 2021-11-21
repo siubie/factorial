@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FactorialController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('faktorial', 'FaktorialController@index')->name('faktorial');
+Route::post('faktorial', [FactorialController::class, 'index'])->name('faktorial');

@@ -29,8 +29,12 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="d-grid gap-2">
-                                    <button class="btn btn-primary btn-block" type="submit">Hitung Faktorial</button>
+                                    <button class="btn btn-primary btn-block" type="submit" id="hitung">Hitung
+                                        Faktorial</button>
                                 </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="result"></div>
                             </div>
                         </form>
                     </div>
@@ -43,6 +47,35 @@
         </div>
     </div>
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+        $("document").ready(function() {
+            $("#hitung").click(function(e) {
+                e.preventDefault();
+                var input = $('#input').val();
+                if (input != parseInt(input, 10)) {
+                    $("#input").css('border', 'solid 2px red');
+                    $("#result").text('Please enter an integer')
+                    $("#result").css('color', 'red');
+                } else {
+                    $("#input").css('border', 'solid 1px #ccc');
+                    var callDetails = {
+                        type: 'POST',
+                        url: '/faktorial',
+                        data: {
+                            'number': input
+                        }
+                    };
+                    $.ajax(callDetails).done(function(factorial) {
+                        console.log('Done Calling');
+                        console.log(factorial);
+                        $("#result").css('color', 'black');
+                        $("#result").text('Faktorial dari ' + input + ' adalah: ' + factorial
+                            .result);
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
