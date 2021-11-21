@@ -45,7 +45,7 @@
                     <a href="#"> Privacy Policy</a>
                 </div>
                 <div class="mt-2 ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                    &copy; Putra Prima Arhandi
+                    &copy; Qa Academy
                     <script>
                         document.write(new Date().getFullYear())
                     </script> -
