@@ -24,8 +24,8 @@
                     <div class="card-body">
                         <form class="row g-3 needs-validation" novalidate>
                             <div class="col-md-12">
-                                <input type="text" class="form-control" id="validationCustom01"
-                                    placeholder="Masukkan Angka">
+                                <input type="text" class="form-control" id="input" placeholder="Masukkan Angka"
+                                    name="input">
                             </div>
                             <div class="col-md-12">
                                 <div class="d-grid gap-2">
