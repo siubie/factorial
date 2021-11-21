@@ -40,7 +40,20 @@
                     </div>
                 </div>
 
-                <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                <div class="mt-2 ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                    <a href="#"> Terms Of Service</a>
+                    <a href="#"> Privacy Policy</a>
+                </div>
+                <div class="mt-2 ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
+                    &copy; Putra Prima Arhandi
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script> -
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script></a>
+                </div>
+                <div class="mt-4 ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
                     Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                 </div>
             </div>
